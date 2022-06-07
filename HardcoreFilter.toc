@@ -3,4 +3,5 @@
 ## Author: Lexie
 ## Notes: Filters Hardcore level up and death messages that are below a certain level
 ## Version: 1
+## DefaultState: disabled
 HardcoreFilter.lua
