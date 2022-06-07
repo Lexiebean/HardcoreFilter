@@ -1,0 +1,6 @@
+## Interface: 11200
+## Title: Hardcore Filter
+## Author: Lexie
+## Notes: Filters Hardcore level up and death messages that are below a certain level
+## Version: 1
+HardcoreFilter.lua
