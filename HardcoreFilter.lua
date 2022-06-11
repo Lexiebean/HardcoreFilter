@@ -11,6 +11,7 @@ function ChatFrame_OnEvent(event)
 		if (Dlvl) then
 			if (tonumber(Dlvl) < tonumber(HardcoreFilter_Level)) then
 				return
+			end
 		end
 		if (Llvl) then
 			if (tonumber(Llvl) < tonumber(HardcoreFilter_Level)) then
