@@ -9,12 +9,12 @@ function ChatFrame_OnEvent(event)
 		_, _, Dchr, Dlvl = string.find(arg1,"A tragedy has occurred. Hardcore character (%a+) has fallen in combat at level (%d+)")
 		_, _, Lchr, Llvl = string.find(arg1,"(%a+) has reached level (%d+)")
 		if (Dlvl) then
-			if (tonumber(Dlvl) < tonumber(HardcoreFilter_Level)) then
+			if (tonumber(Dlvl) <= tonumber(HardcoreFilter_Level)) then
 				return
 			end
 		end
 		if (Llvl) then
-			if (tonumber(Llvl) < tonumber(HardcoreFilter_Level)) then
+			if (tonumber(Llvl) <= tonumber(HardcoreFilter_Level)) then
 				return
 			end
 		end
