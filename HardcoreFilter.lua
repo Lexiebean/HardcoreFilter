@@ -6,15 +6,14 @@ local HardcoreFilter_Level = 20 -- Filters messages about players that are a low
 function ChatFrame_OnEvent(event)
 
 	if (event == "CHAT_MSG_SYSTEM") then
-		_, _, Dchr, Dlvl = string.find(arg1,"A tragedy has occurred. Hardcore character (%a+) has fallen in combat at level (%d+)")
-		_, _, Lchr, Llvl = string.find(arg1,"(%a+) has reached level (%d+)")
+		local _, _, Dchr, Dlvl = string.find(arg1,"A tragedy has occurred. Hardcore character (%a+) has fallen in combat at level (%d+)")
+		local _, _, Lchr, Llvl = string.find(arg1,"(%a+) has reached level (%d+)")
 		if (Dlvl) then
-			if (tonumber(Dlvl) <= tonumber(HardcoreFilter_Level)) then
+			if (tonumber(Dlvl) < tonumber(HardcoreFilter_Level)) then
 				return
-			end
 		end
 		if (Llvl) then
-			if (tonumber(Llvl) <= tonumber(HardcoreFilter_Level)) then
+			if (tonumber(Llvl) < tonumber(HardcoreFilter_Level)) then
 				return
 			end
 		end
